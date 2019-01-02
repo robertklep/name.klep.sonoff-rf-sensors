@@ -1,0 +1,72 @@
+{
+  "id": "name.klep.sonoff-rf-sensors",
+  "sdk": 2,
+  "permissions": [ "homey:wireless:433" ],
+  "name": {
+    "en": "Sonoff RF Sensors"
+  },
+  "description": {
+    "en": "Add support Sonoff RF sensors",
+    "nl": "Voegt ondersteuning toe voor Sonoff RF sensors"
+  },
+  "category": "appliances",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "author": {
+    "name": "Robert Klep",
+    "email": "robert@klep.name"
+  },
+  "signals": {
+    "433": {
+      "sonoff_door_sensor": {
+        "sof": [
+          373,
+          1219
+        ],
+        "eof": [
+          397,
+          3407
+        ],
+        "words": [
+          [
+            394,
+            1205
+          ],
+          [
+            1206,
+            409
+          ]
+        ],
+        "interval": 10000,
+        "_sensitivity": 0.7,
+        "repetitions": 20,
+        "minimalLength": 22,
+        "maximalLength": 22
+      },
+      "sonoff_door_sensor2": {
+        "sof": [ 400, 12400 ],
+        "words": [
+          [ 400, 1200 ],
+          [ 1200, 400 ]
+        ],
+        "interval": 10000,
+        "sensitivity": 0.3,
+        "repetitions": 20,
+        "minimalLength": 24,
+        "maximalLength": 24
+      },
+      "sonoff_door_sensor3": {
+        "sof": [ 487, 14070 ],
+        "words": [
+          [ 487, 1385 ],
+          [ 1385, 487 ]
+        ],
+        "interval": 5000,
+        "sensitivity": 0.3,
+        "repetitions": 20,
+        "minimalLength": 24,
+        "maximalLength": 24
+      }
+    }
+  }
+}
